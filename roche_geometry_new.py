@@ -1,3 +1,7 @@
+# Ballistic stream trajectories in the co-rotating Roche potential.
+# Integrates particle orbits from L1 to determine the impact point
+# on the accretor surface, producing Figures 3a-b in the paper.
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import brentq
@@ -42,6 +46,7 @@ def potential(x, y, M1, M2, x1, x2):
     return -M1/r1 - M2/r2 - 0.5*(x**2 + y**2)
 
 def accel(x, y, vx, vy, M1, M2, x1, x2):
+    """Equations of motion in the co-rotating frame, including Coriolis."""
     r1 = ((x-x1)**2 + y**2)**1.5
     r2 = ((x-x2)**2 + y**2)**1.5
     ax = -M1*(x-x1)/r1 - M2*(x-x2)/r2 + x + 2*vy
@@ -51,6 +56,7 @@ def accel(x, y, vx, vy, M1, M2, x1, x2):
 def integrate_stream(x0, y0, vx0, vy0,
                      M1, M2, x1, x2, Racc,
                      stop_at_impact, dt=2e-3, tmax=12.0):
+    """Leapfrog integrator. Units: a=1, Omega=1."""
 
     x, y = x0, y0
     vx, vy = vx0, vy0
@@ -100,6 +106,9 @@ def make_figs(case_name, P_min,
     a = separation_a(Macc_Msun + Mdon_Msun, P_min)
     Racc = (Racc_Rsun * R_sun) / a
 
+    # eps = cs/(Omega*a): thermal velocity in units of orbital velocity
+    # alpha: launch speed from L1 in units of eps
+    # eta: offset from L1 toward accretor in units of eps
     cs = np.sqrt(k_B * T_gas / (mu_gas * m_H))
     Omega = 2*np.pi / (P_min * 60.0)
     eps = cs / (Omega * a)
@@ -150,16 +159,13 @@ def make_figs(case_name, P_min,
     R1 = np.sqrt((X-x1)**2 + Y**2)
     R2 = np.sqrt((X-x2)**2 + Y**2)
     
-    mask = (R1 < 0.02) | (R2 < 0.02)
-    UU = np.full_like(X, np.nan)
-    UU[~mask] = -M1/R1[~mask] - M2/R2[~mask] - 0.5*(X[~mask]**2 + Y[~mask]**2)
+    UU = -M1/R1 - M2/R2 - 0.5*(X**2 + Y**2)
 
     theta = np.linspace(0, 2*np.pi, 600)
     substellar = (x1 + Racc, 0.0)
 
     def mask_to_no_donor_side(xs, ys):
-        keep = xs <= xL1
-        return xs[keep], ys[keep]
+        return xs, ys
 
     def draw_base(ax):
         ax.contour(X, Y, UU, levels=[UL1], colors="k", linestyles="dashed", linewidths=1.8)
@@ -273,17 +279,17 @@ def make_figs(case_name, P_min,
 make_figs(
     "67min",
     P_min=67.16,
-    Macc_Msun=0.099,
-    Mdon_Msun=0.0397,
-    Racc_Rsun=0.119,
-    T_gas=3000
+    Macc_Msun=0.0985,
+    Mdon_Msun=0.0396,
+    Racc_Rsun=0.1185,
+    T_gas=1500
 )
 
 make_figs(
-    "",
+    "molar_model",
     P_min=86.65,
-    Macc_Msun=0.106, 
-    Mdon_Msun=0.0288,
-    Racc_Rsun=0.126,
-    T_gas=3000
+    Macc_Msun=0.0829,
+    Mdon_Msun=0.0287,
+    Racc_Rsun=0.1023,
+    T_gas=1500
 )
