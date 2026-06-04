@@ -14,6 +14,7 @@ J0440/
 
 J1444/
   LRIS data/Blue/        Keck/LRIS blue-arm reduced spectra (.spec, 15 epochs)
+  LRIS data/Blue_2026apr22/  Keck/LRIS blue-arm reduced spectra from UT 2026 April 22 (.spec, 20 epochs, full orbital coverage)
   LRIS data/Red/         Keck/LRIS red-arm reduced spectra (.spec, 20 epochs)
   radial_velocities.txt  Na I doublet RVs from LRIS red-arm (gamma-subtracted)
   hipercam_band_*.txt    HiPERCAM phase-folded light curves (u, g, r, i, z)
