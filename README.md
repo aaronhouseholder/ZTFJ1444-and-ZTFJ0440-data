@@ -1,5 +1,7 @@
 # ZTF J0440+2325 and ZTF J1444+4820: Data and Code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21499716.svg)](https://doi.org/10.5281/zenodo.21499716)
+
 Data products and analysis code for Householder et al. (2026), "Stars stably accreting from substellar objects," Nature Astronomy.
 
 ## Repository structure
@@ -52,4 +54,4 @@ Released under the MIT License (see `LICENSE`).
 
 ## Citation
 
-If you use these data or code, please cite Householder et al. (2026) and this archive. Machine-readable metadata is in `CITATION.cff`. This repository is archived on Zenodo with a permanent DOI (added here upon release).
+If you use these data or code, please cite Householder et al. (2026) and this archive. Machine-readable metadata is in `CITATION.cff`. This repository is permanently archived on Zenodo: [https://doi.org/10.5281/zenodo.21499716](https://doi.org/10.5281/zenodo.21499716) (concept DOI, always resolves to the latest version).
