@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use these data or code, please cite the associated paper and this archive."
+title: "ZTF J0440+2325 and ZTF J1444+4820: data and analysis code"
+abstract: "Reduced photometry, spectroscopy, radial velocities, MESA brown dwarf evolutionary tracks, and custom analysis code (mass-radius MCMC and ballistic stream simulation) for Householder et al. (2026), Stars stably accreting from substellar objects, Nature Astronomy."
+type: dataset
+license: MIT
+authors:
+  - given-names: Aaron
+    family-names: Householder
+  - given-names: Kaitlyn
+    family-names: Shin
+  - given-names: Kevin B.
+    family-names: Burdge
+  - given-names: Thomas R.
+    family-names: Marsh
+  - given-names: Saul A.
+    family-names: Rappaport
+  - given-names: Kareem
+    family-names: El-Badry
+  - given-names: Joheen
+    family-names: Chakraborty
+  - given-names: Emma
+    family-names: Chickles
+  - given-names: Fei
+    family-names: Dai
+  - given-names: Matthew J.
+    family-names: Graham
+  - given-names: S. R.
+    family-names: Kulkarni
+  - given-names: Pablo
+    family-names: Rodríguez-Gil
+  - given-names: Andrew
+    family-names: Vanderburg
+  - given-names: Samuel
+    family-names: Whitebook
+preferred-citation:
+  type: article
+  title: "Stars stably accreting from substellar objects"
+  journal: "Nature Astronomy"
+  year: 2026
+  authors:
+    - given-names: Aaron
+      family-names: Householder

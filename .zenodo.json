@@ -1,0 +1,32 @@
+{
+  "title": "ZTF J0440+2325 and ZTF J1444+4820: data and analysis code",
+  "description": "Reduced photometry (HiPERCAM), spectroscopy (Keck/LRIS and Keck/ESI), radial velocities, MESA brown dwarf evolutionary tracks, and custom analysis code (the mass-radius MCMC behind Table 1 and the ballistic stream simulation behind Figure 3) for Householder et al. (2026), 'Stars stably accreting from substellar objects,' Nature Astronomy.",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "cataclysmic variables",
+    "brown dwarfs",
+    "mass transfer",
+    "compact binaries",
+    "M dwarfs",
+    "Zwicky Transient Facility",
+    "accretion"
+  ],
+  "creators": [
+    {"name": "Householder, Aaron"},
+    {"name": "Shin, Kaitlyn"},
+    {"name": "Burdge, Kevin B."},
+    {"name": "Marsh, Thomas R."},
+    {"name": "Rappaport, Saul A."},
+    {"name": "El-Badry, Kareem"},
+    {"name": "Chakraborty, Joheen"},
+    {"name": "Chickles, Emma"},
+    {"name": "Dai, Fei"},
+    {"name": "Graham, Matthew J."},
+    {"name": "Kulkarni, S. R."},
+    {"name": "Rodríguez-Gil, Pablo"},
+    {"name": "Vanderburg, Andrew"},
+    {"name": "Whitebook, Samuel"}
+  ]
+}

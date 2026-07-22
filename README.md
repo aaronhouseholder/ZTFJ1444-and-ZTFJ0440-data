@@ -45,3 +45,11 @@ BT-Settl atmosphere models used for spectral fitting are available from the [SVO
 ## Raw data
 
 Raw Keck/ESI and Keck/LRIS data are publicly available through the [Keck Observatory Archive](https://koa.ipac.caltech.edu). ZTF photometry is available from the [ZTF public data release](https://www.ztf.caltech.edu). Swift/XRT observations are available through the Swift mission archive.
+
+## License
+
+Released under the MIT License (see `LICENSE`).
+
+## Citation
+
+If you use these data or code, please cite Householder et al. (2026) and this archive. Machine-readable metadata is in `CITATION.cff`. This repository is archived on Zenodo with a permanent DOI (added here upon release).
